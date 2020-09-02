@@ -1,6 +1,8 @@
 package equipment;
 
-public class Weapon {
+import behaviours.IApply;
+
+public class Weapon implements IApply {
     private WeaponType weaponType;
 
     public Weapon(WeaponType weaponType) {
@@ -11,7 +13,7 @@ public class Weapon {
         return weaponType.getDamage();
     }
 
-    public void use(character.Character character) {
+    public void applyTo(character.Character character) {
         character.takeDamage(getDamage());
     }
 }

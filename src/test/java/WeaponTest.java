@@ -24,7 +24,7 @@ public class WeaponTest {
 
     @Test
     public void canBeUsed() {
-        weapon.use(dragon);
+        weapon.applyTo(dragon);
         assertEquals(95, dragon.getHealthPoints());
     }
 }

@@ -1,23 +1,23 @@
 package character;
 
-import behaviours.IUse;
+import behaviours.IApply;
 
 import java.util.ArrayList;
 
-public abstract class Character {
+public abstract class Character extends Object {
     private String name;
     private int healthPoints;
     private int armourPoints;
     private boolean friendly;
-    private ArrayList<IUse> inventory;
-    private IUse equippedItem;
+    private ArrayList<IApply> inventory;
+    private IApply equippedItem;
 
     public Character(String name, int healthPoints, int armourPoints, boolean friendly) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.armourPoints = armourPoints;
         this.friendly = friendly;
-        this.inventory = new ArrayList<IUse>();
+        this.inventory = new ArrayList<IApply>();
     }
 
     public String getName() {
@@ -36,11 +36,11 @@ public abstract class Character {
         return friendly;
     }
 
-    public ArrayList<IUse> getInventory() {
+    public ArrayList<IApply> getInventory() {
         return inventory;
     }
 
-    public IUse getEquippedItem() {
+    public IApply getEquippedItem() {
         return equippedItem;
     }
 

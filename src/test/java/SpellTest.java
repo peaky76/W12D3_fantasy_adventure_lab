@@ -38,7 +38,7 @@ public class SpellTest {
     @Test
     public void canUseSpell() {
         dragon.takeDamage(10);
-        healingSpell.use(dragon);
+        healingSpell.applyTo(dragon);
         assertEquals(100, dragon.getHealthPoints());
     }
 }

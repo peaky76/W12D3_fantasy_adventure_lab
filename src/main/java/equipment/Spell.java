@@ -1,6 +1,8 @@
 package equipment;
 
-public class Spell {
+import behaviours.IApply;
+
+public class Spell implements IApply {
     private String name;
     private SpellType spellType;
     private int strength;
@@ -23,7 +25,7 @@ public class Spell {
         return strength;
     }
 
-    public void use(character.Character character) {
+    public void applyTo(character.Character character) {
         if (spellType == SpellType.ATTACKING) {
             character.takeDamage(getStrength());
         }
