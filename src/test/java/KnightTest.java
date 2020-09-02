@@ -37,4 +37,10 @@ public class KnightTest {
     public void inventoryStartsEmpty() {
         assertEquals(0, knight.getInventoryCount());
     }
+
+    @Test
+    public void canTakeDamage() {
+        knight.takeDamage(5);
+        assertEquals(45, knight.getHealthPoints());
+    }
 }

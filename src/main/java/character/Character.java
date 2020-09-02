@@ -47,4 +47,8 @@ public abstract class Character {
     public int getInventoryCount() {
         return inventory.size();
     }
+
+    public void takeDamage(int amountOfDamage) {
+        this.healthPoints -= amountOfDamage;
+    }
 }
