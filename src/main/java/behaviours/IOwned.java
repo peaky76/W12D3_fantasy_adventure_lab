@@ -2,6 +2,7 @@ package behaviours;
 
 public interface IOwned {
 
-    public void ownedBy(character.Character character);
+    public character.Character getOwner();
+    public void setOwner(character.Character owner);
 
 }

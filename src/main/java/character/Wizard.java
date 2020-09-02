@@ -19,9 +19,10 @@ public class Wizard extends Character implements IMagic {
     }
 
     public void changeOwnedCreature(IOwned creature) {
+        if (ownedCreature != null) { ownedCreature.setOwner(null); }
         ownedCreature = creature;
+        creature.setOwner(this);
     }
-
 
     public IOwned getOwnedCreature() {
         return ownedCreature;

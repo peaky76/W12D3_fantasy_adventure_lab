@@ -4,11 +4,17 @@ import behaviours.IOwned;
 
 public class Dragon extends Character implements IOwned {
 
+    private Character owner;
+
     public Dragon(String name, int healthPoints, int armourPoints, boolean friendly) {
         super(name, healthPoints, armourPoints, friendly);
     }
 
-    public void ownedBy(character.Character character) {
+    public character.Character getOwner() {
+        return owner;
+    }
 
+    public void setOwner(Character owner) {
+        this.owner = owner;
     }
 }
