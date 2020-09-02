@@ -51,4 +51,7 @@ public abstract class Character {
     public void takeDamage(int amountOfDamage) {
         this.healthPoints -= amountOfDamage;
     }
+
+    public void healDamage(int amountOfHealing) { this.healthPoints += amountOfHealing; }
+
 }

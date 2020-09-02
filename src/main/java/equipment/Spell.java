@@ -22,4 +22,13 @@ public class Spell {
     public int getStrength() {
         return strength;
     }
+
+    public void use(character.Character character) {
+        if (spellType == SpellType.ATTACKING) {
+            character.takeDamage(getStrength());
+        }
+        else if (spellType == SpellType.HEALING) {
+            character.healDamage(getStrength());
+        }
+    }
 }
