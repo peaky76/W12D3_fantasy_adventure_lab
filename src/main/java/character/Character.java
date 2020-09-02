@@ -4,7 +4,7 @@ import behaviours.IApply;
 
 import java.util.ArrayList;
 
-public abstract class Character extends Object {
+public abstract class Character {
     private String name;
     private int healthPoints;
     private int armourPoints;
@@ -53,5 +53,22 @@ public abstract class Character extends Object {
     }
 
     public void healDamage(int amountOfHealing) { this.healthPoints += amountOfHealing; }
+
+    public void pickUp(IApply item) {
+        inventory.add(item);
+    }
+
+    public void drop(IApply item) {
+        inventory.remove(item);
+        if (equippedItem == item) {
+            equippedItem = null;
+        }
+    }
+
+    public void equip(IApply item) {
+        if (inventory.contains(item)) {
+            equippedItem = item;
+        }
+    }
 
 }

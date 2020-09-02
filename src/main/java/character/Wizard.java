@@ -1,12 +1,29 @@
 package character;
 
-public class Wizard extends Character {
+import behaviours.IMagic;
+import behaviours.IOwned;
+import equipment.Spell;
+
+public class Wizard extends Character implements IMagic {
+
+    private IOwned ownedCreature;
 
     public Wizard(String name, int healthPoints, int armourPoints, boolean friendly) {
         super(name, healthPoints, armourPoints, friendly);
     }
 
-//    public castSpell(Spell spell, Object target) {
-//
-//    }
+    public void castSpell(character.Character character) {
+        if (getEquippedItem() instanceof Spell) {
+            getEquippedItem().applyTo(character);
+        }
+    }
+
+    public void changeOwnedCreature(IOwned creature) {
+        ownedCreature = creature;
+    }
+
+
+    public IOwned getOwnedCreature() {
+        return ownedCreature;
+    }
 }

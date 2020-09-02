@@ -1,4 +1,7 @@
+import character.Dragon;
 import character.Wizard;
+import equipment.Spell;
+import equipment.SpellType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,10 +10,14 @@ import static org.junit.Assert.assertEquals;
 public class WizardTest {
 
     Wizard wizard;
+    Dragon dragon;
+    Spell healingSpell;
 
     @Before
     public void before() {
         wizard = new Wizard("Merlin", 30, 5, true);
+        dragon = new Dragon("Flamebreath", 100, 10, false);
+        healingSpell = new Spell("Super Healing", SpellType.HEALING, 20);
     }
 
     @Test
@@ -36,5 +43,20 @@ public class WizardTest {
     @Test
     public void inventoryStartsEmpty() {
         assertEquals(0, wizard.getInventoryCount());
+    }
+
+    @Test
+    public void canAttack() {
+        wizard.pickUp(healingSpell);
+        wizard.equip(healingSpell);
+        dragon.takeDamage(50);
+        wizard.castSpell(dragon);
+        assertEquals(70, dragon.getHealthPoints());
+    }
+
+    @Test
+    public void canChangeOwnedCreature() {
+        wizard.changeOwnedCreature(dragon);
+        assertEquals(dragon, wizard.getOwnedCreature());
     }
 }

@@ -2,6 +2,6 @@ package behaviours;
 
 public interface IOwned {
 
-    public void ownedBy(Character character);
+    public void ownedBy(character.Character character);
 
 }

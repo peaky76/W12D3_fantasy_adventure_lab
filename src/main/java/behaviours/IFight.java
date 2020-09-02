@@ -1,5 +1,5 @@
 package behaviours;
 
 public interface IFight {
-    public void attack(Character character);
+    public void attack(character.Character character);
 }
