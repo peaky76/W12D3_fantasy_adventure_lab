@@ -29,4 +29,13 @@ public class Room {
     public void addInhabitant(character.Character character) {
         inhabitants.add(character);
     }
+
+    public Boolean isCleared() {
+        for (character.Character enemy: inhabitants) {
+            if (!enemy.isDead()) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
