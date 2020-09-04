@@ -4,6 +4,6 @@ import being.Being;
 
 public interface Knowable {
 
-    public void useOn(Being being);
+    void useOn(Being being);
 
 }

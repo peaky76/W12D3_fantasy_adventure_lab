@@ -1,6 +1,6 @@
-import item.Clarity;
-import item.Gemstone;
-import item.Treasure;
+import item.valuable.Clarity;
+import item.valuable.Gemstone;
+import item.valuable.Treasure;
 import org.junit.Before;
 import org.junit.Test;
 

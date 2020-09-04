@@ -1,4 +1,4 @@
-package item;
+package item.valuable;
 
 public enum Clarity {
 

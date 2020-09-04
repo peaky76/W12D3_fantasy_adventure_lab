@@ -1,7 +1,9 @@
-package item;
+package item.valuable;
 
 import behaviours.Exchangeable;
 import behaviours.Possessable;
+import item.valuable.Clarity;
+import item.valuable.Gemstone;
 
 public class Treasure implements Possessable, Exchangeable {
 

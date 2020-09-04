@@ -4,6 +4,6 @@ import being.Being;
 
 public interface Consumable {
 
-    public void applyEffectTo(Being being);
+    void applyEffectTo(Being being);
 
 }

@@ -4,6 +4,6 @@ import being.Being;
 
 public interface Victimable {
 
-    public void useOn(Being victim);
+    void useOn(Being victim);
 
 }

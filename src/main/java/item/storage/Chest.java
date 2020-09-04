@@ -1,11 +1,8 @@
 package item.storage;
 
 import behaviours.Lockable;
-import behaviours.Possessable;
 import item.Key;
 import item.Material;
-
-import java.util.ArrayList;
 
 public class Chest extends Container implements Lockable {
 
@@ -32,6 +29,5 @@ public class Chest extends Container implements Lockable {
     }
 
     public void setLockedStatus(Boolean locked) { isLocked = locked; }
-
 
 }

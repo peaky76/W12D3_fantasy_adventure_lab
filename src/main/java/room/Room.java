@@ -2,29 +2,26 @@ package room;
 
 import behaviours.Victimable;
 import being.Being;
+import item.storage.Container;
 
 import java.util.ArrayList;
 
-public class Room {
+public abstract class Room {
 
-    private ArrayList<Victimable> contents;
+    private Container container;
     private ArrayList<Being> inhabitants;
 
     public Room() {
-        this.contents = new ArrayList<Victimable>();
+        this.container = createContainer();
         this.inhabitants = new ArrayList<Being>();
     }
 
-    public ArrayList<Victimable> getContents() {
-        return contents;
+    public Container getContainer() {
+        return container;
     }
 
     public ArrayList<Being> getInhabitants() {
         return inhabitants;
-    }
-
-    public void addContent(Victimable item) {
-        contents.add(item);
     }
 
     public void addInhabitant(Being being) {
@@ -39,4 +36,7 @@ public class Room {
         }
         return true;
     }
+
+    protected abstract Container createContainer();
+    
 }

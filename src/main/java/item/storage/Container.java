@@ -1,10 +1,11 @@
 package item.storage;
 
+import behaviours.Fillable;
 import behaviours.Possessable;
 
 import java.util.ArrayList;
 
-public abstract class Container {
+public abstract class Container implements Fillable {
 
     private ArrayList<Possessable> contents;
 
@@ -24,9 +25,5 @@ public abstract class Container {
         if (this.contents.contains(item)) {
             this.contents.remove(item);
         }
-    }
-
-    public int contentsCount() {
-        return this.contents.size();
     }
 }

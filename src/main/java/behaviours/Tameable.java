@@ -4,7 +4,7 @@ import being.Being;
 
 public interface Tameable {
 
-    public Being getOwner();
-    public void setOwner(Being owner);
+    Being getOwner();
+    void setOwner(Being owner);
 
 }

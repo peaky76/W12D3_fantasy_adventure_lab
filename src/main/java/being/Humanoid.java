@@ -1,23 +1,24 @@
 package being;
 
 import behaviours.Knowable;
-import behaviours.Victimable;
+import behaviours.Possessable;
+import item.storage.Inventory;
 
 import java.util.ArrayList;
 
 public abstract class Humanoid extends Being {
 
-    private ArrayList<Victimable> inventory;
+    private Inventory inventory;
     private ArrayList<Knowable> knowledge;
-    private Victimable equippedItem;
+    private Possessable equippedItem;
 
     public Humanoid(String name, int healthPoints, Nature nature) {
         super(name, healthPoints, nature);
-        this.inventory = new ArrayList<Victimable>();
+        this.inventory = new Inventory();
         this.knowledge = new ArrayList<Knowable>();
     }
 
-    public ArrayList<Victimable> getInventory() {
+    public Inventory getInventory() {
         return inventory;
     }
 
@@ -25,28 +26,27 @@ public abstract class Humanoid extends Being {
         return knowledge;
     }
 
-    public Victimable getEquippedItem() {
+    public Possessable getEquippedItem() {
         return equippedItem;
     }
 
-    public int getInventoryCount() {
-        return inventory.size();
+    public int inventoryCount() {
+        return inventory.contentsCount();
     }
 
-    public void pickUp(Victimable item) {
-        inventory.add(item);
-    }
+    public void pickUp(Possessable item) { inventory.addItem(item); }
 
-    public void drop(Victimable item) {
-        inventory.remove(item);
+    public void drop(Possessable item) {
+        inventory.removeItem(item);
         if (equippedItem == item) {
             equippedItem = null;
         }
     }
 
-    public void equip(Victimable item) {
-        if (inventory.contains(item)) {
+    public void equip(Possessable item) {
+        if (inventory.getContents().contains(item)) {
             equippedItem = item;
         }
     }
+
 }

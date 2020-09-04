@@ -38,7 +38,7 @@ public class HumanTest {
 
     @Test
     public void inventoryStartsEmpty() {
-        assertEquals(0, human.getInventoryCount());
+        assertEquals(0, human.inventoryCount());
     }
 
     @Test
@@ -62,14 +62,14 @@ public class HumanTest {
     @Test
     public void canPickUpItem() {
         human.pickUp(weapon);
-        assertEquals(1, human.getInventoryCount());
+        assertEquals(1, human.inventoryCount());
     }
 
     @Test
     public void canDropItem() {
         human.pickUp(weapon);
         human.drop(weapon);
-        assertEquals(0, human.getInventoryCount());
+        assertEquals(0, human.inventoryCount());
     }
 
     @Test
