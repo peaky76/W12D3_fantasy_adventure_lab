@@ -5,12 +5,12 @@ import being.Being;
 
 public class Spell implements Knowable {
     private String name;
-    private SpellType spellType;
+    private Effect effect;
     private int strength;
 
-    public Spell(String name, SpellType spellType, int strength) {
+    public Spell(String name, Effect effect, int strength) {
         this.name = name;
-        this.spellType = spellType;
+        this.effect = effect;
         this.strength = strength;
     }
 
@@ -18,8 +18,8 @@ public class Spell implements Knowable {
         return name;
     }
 
-    public SpellType getSpellType() {
-        return spellType;
+    public Effect getEffect() {
+        return effect;
     }
 
     public int getStrength() {
@@ -27,10 +27,10 @@ public class Spell implements Knowable {
     }
 
     public void useOn(Being being) {
-        if (spellType == SpellType.ATTACKING) {
+        if (effect == Effect.ATTACKING) {
             being.takeDamage(getStrength());
         }
-        else if (spellType == SpellType.HEALING) {
+        else if (effect == Effect.HEALING) {
             being.healDamage(getStrength());
         }
     }

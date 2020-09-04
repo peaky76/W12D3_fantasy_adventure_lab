@@ -1,6 +1,7 @@
 package item;
 
-public enum SpellType {
+public enum Effect {
+
     HEALING,
     ATTACKING,
 

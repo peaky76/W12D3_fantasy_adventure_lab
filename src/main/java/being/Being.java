@@ -10,7 +10,6 @@ public abstract class Being {
         this.name = name;
         this.healthPoints = healthPoints;
         this.nature = nature;
-
     }
 
     public String getName() {
@@ -25,15 +24,11 @@ public abstract class Being {
         return nature;
     }
 
-
-
     public void takeDamage(int amountOfDamage) {
         this.healthPoints -= amountOfDamage;
     }
 
     public void healDamage(int amountOfHealing) { this.healthPoints += amountOfHealing; }
-
-
 
     public Boolean isDead() {
         return healthPoints <= 0;
