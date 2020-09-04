@@ -1,11 +1,11 @@
 package being;
 
 import behaviours.Magicable;
-import behaviours.Ownable;
+import behaviours.Tameable;
 
 public class Wizard extends Humanoid implements Magicable {
 
-    private Ownable ownedCreature;
+    private Tameable ownedCreature;
 
     public Wizard(String name, int healthPoints, Nature nature) {
         super(name, healthPoints, nature);
@@ -17,13 +17,13 @@ public class Wizard extends Humanoid implements Magicable {
 //        }
     }
 
-    public void changeOwnedCreature(Ownable creature) {
+    public void changeOwnedCreature(Tameable creature) {
         if (ownedCreature != null) { ownedCreature.setOwner(null); }
         ownedCreature = creature;
         creature.setOwner(this);
     }
 
-    public Ownable getOwnedCreature() {
+    public Tameable getOwnedCreature() {
         return ownedCreature;
     }
 }

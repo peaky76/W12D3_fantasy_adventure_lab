@@ -3,10 +3,9 @@ package item;
 import behaviours.Consumable;
 import behaviours.Exchangeable;
 import behaviours.Possessable;
-import behaviours.Usable;
 import being.Being;
 
-public class Potion implements Possessable, Consumable, Exchangeable {
+public class Potion implements Consumable, Exchangeable {
 
     private String name;
     private Effect effect;
@@ -30,7 +29,7 @@ public class Potion implements Possessable, Consumable, Exchangeable {
         return strength;
     }
 
-    public void haveEffectOn(Being recipient) {
+    public void applyEffectTo(Being recipient) {
         if (this.effect == Effect.ATTACKING) {
             recipient.takeDamage(strength);
         }

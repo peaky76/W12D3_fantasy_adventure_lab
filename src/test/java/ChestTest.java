@@ -37,13 +37,13 @@ public class ChestTest {
     @Test
     public void canUnlockWithCorrectKey() {
         chest.unlockWith(correctKey);
-        assertEquals(false, chest.getLocked());
+        assertEquals(false, chest.getLockedStatus());
     }
 
     @Test
     public void cannotUnlockWithWrongKey() {
         chest.unlockWith(wrongKey);
-        assertEquals(true, chest.getLocked());
+        assertEquals(true, chest.getLockedStatus());
     }
 
     @Test

@@ -22,13 +22,10 @@ public class Door implements Lockable {
         return correctKey;
     }
 
-    public Boolean getLocked() {
+    public Boolean getLockedStatus() {
         return isLocked;
     }
 
-    public void unlockWith(Key key) {
-        if (key == correctKey) {
-            this.isLocked = false;
-        }
-    }
+    public void setLockedStatus(Boolean locked) { isLocked = locked; }
+
 }

@@ -2,8 +2,8 @@ package behaviours;
 
 import being.Being;
 
-public interface Consumable extends Usable {
+public interface Consumable {
 
-    public void haveEffectOn(Being being);
+    public void applyEffectTo(Being being);
 
 }

@@ -1,9 +1,10 @@
 package item;
 
 import behaviours.Knowable;
+import behaviours.Victimable;
 import being.Being;
 
-public class Spell implements Knowable {
+public class Spell implements Knowable, Victimable {
     private String name;
     private Effect effect;
     private int strength;

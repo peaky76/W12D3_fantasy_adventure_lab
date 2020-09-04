@@ -33,13 +33,13 @@ public class PotionTest {
     @Test
     public void canHealCharacter() {
         player.takeDamage(10);
-        potion.useOn(player);
+        potion.applyEffectTo(player);
         assertEquals(95, player.getHealthPoints());
     }
 
     @Test
     public void canPoisonCharacter() {
-        poison.useOn(player);
+        poison.applyEffectTo(player);
         assertEquals(45, player.getHealthPoints());
     }
 

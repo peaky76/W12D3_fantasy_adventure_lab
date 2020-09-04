@@ -1,6 +1,6 @@
 package behaviours;
 
-public interface Exchangeable {
+public interface Exchangeable extends Possessable {
 
     public int getMonetaryValue();
 

@@ -32,13 +32,13 @@ public class DoorTest {
     @Test
     public void canUnlockWithCorrectKey() {
         door.unlockWith(correctKey);
-        assertEquals(false, door.getLocked());
+        assertEquals(false, door.getLockedStatus());
     }
 
     @Test
     public void cannotUnlockWithWrongKey() {
         door.unlockWith(wrongKey);
-        assertEquals(true, door.getLocked());
+        assertEquals(true, door.getLockedStatus());
     }
 
 }

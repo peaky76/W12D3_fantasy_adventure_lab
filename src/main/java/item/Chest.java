@@ -1,7 +1,7 @@
 package item;
 
 import behaviours.Lockable;
-import behaviours.Usable;
+import behaviours.Possessable;
 
 import java.util.ArrayList;
 
@@ -10,13 +10,13 @@ public class Chest implements Lockable {
     private Material material;
     private Key correctKey;
     private Boolean isLocked;
-    private ArrayList<Usable> contents;
+    private ArrayList<Possessable> contents;
 
     public Chest(Material material, Key correctKey, Boolean isLocked) {
         this.material = material;
         this.correctKey = correctKey;
         this.isLocked = isLocked;
-        this.contents = new ArrayList<Usable>();
+        this.contents = new ArrayList<Possessable>();
     }
 
     public Material getMaterial() {
@@ -27,21 +27,17 @@ public class Chest implements Lockable {
         return correctKey;
     }
 
-    public Boolean getLocked() {
+    public Boolean getLockedStatus() {
         return isLocked;
     }
 
-    public void unlockWith(Key key) {
-        if (key == correctKey) {
-            this.isLocked = false;
-        }
-    }
+    public void setLockedStatus(Boolean locked) { isLocked = locked; }
 
-    public void addItem(Usable item) {
+    public void addItem(Possessable item) {
         this.contents.add(item);
     }
 
-    public void removeItem(Usable item) {
+    public void removeItem(Possessable item) {
         if (this.contents.contains(item)) {
             this.contents.remove(item);
         }

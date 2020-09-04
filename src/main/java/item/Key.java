@@ -1,10 +1,10 @@
 package item;
 
-import behaviours.Interactable;
+import behaviours.Lockable;
 import behaviours.Possessable;
-import behaviours.Usable;
+import behaviours.Victimable;
 
-public class Key implements Possessable, Usable {
+public class Key implements Possessable {
 
     private String name;
     private Material material;
