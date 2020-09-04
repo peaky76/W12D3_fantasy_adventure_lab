@@ -1,5 +1,5 @@
-import character.Dragon;
-import character.Wizard;
+import being.Dragon;
+import being.Wizard;
 import equipment.Item;
 import equipment.ItemType;
 import equipment.Spell;

@@ -1,10 +1,10 @@
-package character;
+package being;
 
 import behaviours.IApply;
 
 import java.util.ArrayList;
 
-public abstract class Character {
+public abstract class Being {
     private String name;
     private int healthPoints;
     private int armourPoints;
@@ -12,7 +12,7 @@ public abstract class Character {
     private ArrayList<IApply> inventory;
     private IApply equippedItem;
 
-    public Character(String name, int healthPoints, int armourPoints, boolean friendly) {
+    public Being(String name, int healthPoints, int armourPoints, boolean friendly) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.armourPoints = armourPoints;

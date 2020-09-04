@@ -1,6 +1,7 @@
 package equipment;
 
 import behaviours.IApply;
+import being.Being;
 
 public class Spell implements IApply {
     private String name;
@@ -25,12 +26,12 @@ public class Spell implements IApply {
         return strength;
     }
 
-    public void applyTo(character.Character character) {
+    public void applyTo(Being being) {
         if (spellType == SpellType.ATTACKING) {
-            character.takeDamage(getStrength());
+            being.takeDamage(getStrength());
         }
         else if (spellType == SpellType.HEALING) {
-            character.healDamage(getStrength());
+            being.healDamage(getStrength());
         }
     }
 }

@@ -1,6 +1,7 @@
 package equipment;
 
 import behaviours.IApply;
+import being.Being;
 
 public class Item implements IApply {
 
@@ -20,7 +21,7 @@ public class Item implements IApply {
         return itemType;
     }
 
-    public void applyTo(character.Character character) {
+    public void applyTo(Being being) {
 
     }
 }

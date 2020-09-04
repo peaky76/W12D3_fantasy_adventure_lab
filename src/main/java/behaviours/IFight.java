@@ -1,5 +1,7 @@
 package behaviours;
 
+import being.Being;
+
 public interface IFight {
-    public void attack(character.Character character);
+    public void attack(Being being);
 }

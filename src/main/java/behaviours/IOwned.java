@@ -1,8 +1,10 @@
 package behaviours;
 
+import being.Being;
+
 public interface IOwned {
 
-    public character.Character getOwner();
-    public void setOwner(character.Character owner);
+    public Being getOwner();
+    public void setOwner(Being owner);
 
 }

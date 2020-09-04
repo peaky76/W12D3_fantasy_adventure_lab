@@ -1,4 +1,4 @@
-import character.Dragon;
+import being.Dragon;
 import equipment.Weapon;
 import equipment.WeaponType;
 import org.junit.Before;

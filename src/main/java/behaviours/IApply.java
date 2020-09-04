@@ -1,5 +1,7 @@
 package behaviours;
 
+import being.Being;
+
 public interface IApply {
-    public void applyTo(character.Character character);
+    public void applyTo(Being being);
 }

@@ -1,5 +1,5 @@
-import character.Dragon;
-import character.Knight;
+import being.Dragon;
+import being.Knight;
 import equipment.Weapon;
 import equipment.WeaponType;
 import org.junit.Before;

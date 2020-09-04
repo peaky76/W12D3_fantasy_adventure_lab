@@ -1,5 +1,5 @@
-import character.Dragon;
-import character.Wizard;
+import being.Dragon;
+import being.Wizard;
 import equipment.Spell;
 import equipment.SpellType;
 import org.junit.Before;

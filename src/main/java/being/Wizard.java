@@ -1,10 +1,10 @@
-package character;
+package being;
 
 import behaviours.IMagic;
 import behaviours.IOwned;
 import equipment.Spell;
 
-public class Wizard extends Character implements IMagic {
+public class Wizard extends Being implements IMagic {
 
     private IOwned ownedCreature;
 
@@ -12,9 +12,9 @@ public class Wizard extends Character implements IMagic {
         super(name, healthPoints, armourPoints, friendly);
     }
 
-    public void castSpell(character.Character character) {
+    public void castSpell(Being being) {
         if (getEquippedItem() instanceof Spell) {
-            getEquippedItem().applyTo(character);
+            getEquippedItem().applyTo(being);
         }
     }
 

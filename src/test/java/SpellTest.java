@@ -1,4 +1,4 @@
-import character.Dragon;
+import being.Dragon;
 import equipment.Spell;
 import equipment.SpellType;
 import org.junit.Before;

@@ -1,7 +1,9 @@
 package behaviours;
 
+import being.Being;
+
 public interface IMagic {
 
-    public void castSpell(character.Character character);
+    public void castSpell(Being being);
 
 }
