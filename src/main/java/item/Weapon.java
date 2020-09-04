@@ -2,10 +2,11 @@ package item;
 
 import action.Attack;
 import behaviours.Exchangeable;
+import behaviours.Possessable;
 import behaviours.Usable;
 import being.Being;
 
-public class Weapon implements Usable, Exchangeable {
+public class Weapon implements Possessable, Usable, Exchangeable {
 
     private WeaponType weaponType;
     private Material material;

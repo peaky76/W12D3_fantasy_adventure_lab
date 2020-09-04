@@ -1,6 +1,8 @@
 package item;
 
-public class Door {
+import behaviours.Lockable;
+
+public class Door implements Lockable {
 
     private Material material;
     private Key correctKey;

@@ -1,10 +1,11 @@
 package item;
 
+import behaviours.Lockable;
 import behaviours.Usable;
 
 import java.util.ArrayList;
 
-public class Chest {
+public class Chest implements Lockable {
 
     private Material material;
     private Key correctKey;

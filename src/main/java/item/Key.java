@@ -1,6 +1,10 @@
 package item;
 
-public class Key {
+import behaviours.Interactable;
+import behaviours.Possessable;
+import behaviours.Usable;
+
+public class Key implements Possessable, Usable {
 
     private String name;
     private Material material;
@@ -21,4 +25,9 @@ public class Key {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void useOn(Lockable doorOrChest) {
+        doorOrChest.unlockWith(this);
+    }
+
 }
