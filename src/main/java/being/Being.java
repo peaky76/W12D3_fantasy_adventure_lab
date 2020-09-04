@@ -1,9 +1,5 @@
 package being;
 
-import behaviours.Useable;
-
-import java.util.ArrayList;
-
 public abstract class Being {
     private String name;
     private int healthPoints;

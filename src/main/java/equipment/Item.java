@@ -1,9 +1,9 @@
 package equipment;
 
-import behaviours.Useable;
+import behaviours.Usable;
 import being.Being;
 
-public class Item implements Useable {
+public class Item implements Usable {
 
     private String name;
     private ItemType itemType;

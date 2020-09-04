@@ -1,23 +1,23 @@
 package being;
 
 import behaviours.Knowable;
-import behaviours.Useable;
+import behaviours.Usable;
 
 import java.util.ArrayList;
 
 public abstract class Humanoid extends Being {
 
-    private ArrayList<Useable> inventory;
+    private ArrayList<Usable> inventory;
     private ArrayList<Knowable> knowledge;
-    private Useable equippedItem;
+    private Usable equippedItem;
 
     public Humanoid(String name, int healthPoints, Nature nature) {
         super(name, healthPoints, nature);
-        this.inventory = new ArrayList<Useable>();
+        this.inventory = new ArrayList<Usable>();
         this.knowledge = new ArrayList<Knowable>();
     }
 
-    public ArrayList<Useable> getInventory() {
+    public ArrayList<Usable> getInventory() {
         return inventory;
     }
 
@@ -25,7 +25,7 @@ public abstract class Humanoid extends Being {
         return knowledge;
     }
 
-    public Useable getEquippedItem() {
+    public Usable getEquippedItem() {
         return equippedItem;
     }
 
@@ -33,18 +33,18 @@ public abstract class Humanoid extends Being {
         return inventory.size();
     }
 
-    public void pickUp(Useable item) {
+    public void pickUp(Usable item) {
         inventory.add(item);
     }
 
-    public void drop(Useable item) {
+    public void drop(Usable item) {
         inventory.remove(item);
         if (equippedItem == item) {
             equippedItem = null;
         }
     }
 
-    public void equip(Useable item) {
+    public void equip(Usable item) {
         if (inventory.contains(item)) {
             equippedItem = item;
         }
