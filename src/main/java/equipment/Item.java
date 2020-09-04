@@ -21,7 +21,7 @@ public class Item implements Usable {
         return itemType;
     }
 
-    public void applyTo(Being being) {
+    public void useOn(Being being) {
 
     }
 }

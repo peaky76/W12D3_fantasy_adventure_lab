@@ -31,7 +31,7 @@ public class DragonTest {
 
     @Test
     public void hasAttacks() {
-        assertEquals(2, dragon.getNumOfAttacks());
+        assertEquals(2, dragon.meansOfAttackCount());
     }
 
 }

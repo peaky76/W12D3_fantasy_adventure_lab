@@ -1,9 +1,9 @@
 package equipment;
 
-import behaviours.Usable;
+import behaviours.Knowable;
 import being.Being;
 
-public class Spell implements Usable {
+public class Spell implements Knowable {
     private String name;
     private SpellType spellType;
     private int strength;
@@ -26,7 +26,7 @@ public class Spell implements Usable {
         return strength;
     }
 
-    public void applyTo(Being being) {
+    public void useOn(Being being) {
         if (spellType == SpellType.ATTACKING) {
             being.takeDamage(getStrength());
         }
