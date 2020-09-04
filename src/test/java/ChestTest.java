@@ -1,4 +1,5 @@
 import item.*;
+import item.storage.Chest;
 import org.junit.Before;
 import org.junit.Test;
 
