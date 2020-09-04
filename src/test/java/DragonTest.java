@@ -13,12 +13,12 @@ public class DragonTest {
 
     @Before
     public void before() {
-        dragon = new Dragon("Flamebreath", 100, Nature.EVIL);
+        dragon = new Dragon(100);
     }
 
     @Test
     public void hasName() {
-        assertEquals("Flamebreath", dragon.getName());
+        assertEquals("A DRAGON", dragon.getName());
     }
 
     @Test
