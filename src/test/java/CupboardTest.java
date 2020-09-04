@@ -19,7 +19,9 @@ public class CupboardTest {
     public void before() {
         correctKey = new Key(Material.IRON);
         wrongKey = new Key(Material.IRON);
-        cupboard = new Cupboard(correctKey, true);
+        cupboard = new Cupboard();
+        cupboard.setCorrectKey(correctKey);
+        cupboard.setLockedStatus(true);
         weapon = new Weapon(WeaponType.SWORD, Material.STEEL);
     }
 

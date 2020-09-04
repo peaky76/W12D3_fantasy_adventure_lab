@@ -12,14 +12,16 @@ public class Cupboard extends Container implements Lockable {
     private Key correctKey;
     private Boolean isLocked;
 
-    public Cupboard(Key correctKey, Boolean isLocked) {
-        this.correctKey = correctKey;
-        this.isLocked = isLocked;
+    public Cupboard() {
+        this.correctKey = null;
+        this.isLocked = false;
     }
 
     public Key getCorrectKey() {
         return correctKey;
     }
+
+    public void setCorrectKey(Key correctKey) { this.correctKey = correctKey; }
 
     public Boolean getLockedStatus() {
         return isLocked;

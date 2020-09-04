@@ -1,6 +1,5 @@
 package room;
 
-import behaviours.Victimable;
 import being.Being;
 import item.storage.Container;
 

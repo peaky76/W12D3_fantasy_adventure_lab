@@ -16,7 +16,9 @@ public class ChestTest {
     public void before() {
         correctKey = new Key(Material.WOOD);
         wrongKey = new Key(Material.IRON);
-        chest = new Chest(Material.WOOD, correctKey, true);
+        chest = new Chest(Material.WOOD);
+        chest.setCorrectKey(correctKey);
+        chest.setLockedStatus(true);
         weapon = new Weapon(WeaponType.ARROW, Material.IRON);
     }
 

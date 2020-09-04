@@ -10,10 +10,11 @@ public class Chest extends Container implements Lockable {
     private Key correctKey;
     private Boolean isLocked;
 
-    public Chest(Material material, Key correctKey, Boolean isLocked) {
+    public Chest(Material material) {
         this.material = material;
-        this.correctKey = correctKey;
-        this.isLocked = isLocked;
+
+        this.correctKey = null;
+        this.isLocked = false;
     }
 
     public Material getMaterial() {
@@ -23,6 +24,8 @@ public class Chest extends Container implements Lockable {
     public Key getCorrectKey() {
         return correctKey;
     }
+
+    public void setCorrectKey(Key correctKey) { this.correctKey = correctKey; }
 
     public Boolean getLockedStatus() {
         return isLocked;
