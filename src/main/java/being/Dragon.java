@@ -3,12 +3,12 @@ package being;
 import behaviours.Fightable;
 import behaviours.Ownable;
 
-public class Dragon extends Being implements Fightable, Ownable {
+public class Dragon extends Being implements Ownable {
 
     private Being owner;
 
-    public Dragon(String name, int healthPoints, int armourPoints, boolean friendly) {
-        super(name, healthPoints, armourPoints, friendly);
+    public Dragon(String name, int healthPoints, Nature nature) {
+        super(name, healthPoints, nature);
     }
 
     public Being getOwner() {

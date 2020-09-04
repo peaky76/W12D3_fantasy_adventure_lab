@@ -4,18 +4,18 @@ import behaviours.Magicable;
 import behaviours.Ownable;
 import equipment.Spell;
 
-public class Wizard extends Being implements Magicable {
+public class Wizard extends Humanoid implements Magicable {
 
     private Ownable ownedCreature;
 
-    public Wizard(String name, int healthPoints, int armourPoints, boolean friendly) {
-        super(name, healthPoints, armourPoints, friendly);
+    public Wizard(String name, int healthPoints, Nature nature) {
+        super(name, healthPoints, nature);
     }
 
     public void castSpell(Being being) {
-        if (getEquippedItem() instanceof Spell) {
-            getEquippedItem().applyTo(being);
-        }
+//        if (getEquippedItem() instanceof Spell) {
+//            getEquippedItem().applyTo(being);
+//        }
     }
 
     public void changeOwnedCreature(Ownable creature) {
