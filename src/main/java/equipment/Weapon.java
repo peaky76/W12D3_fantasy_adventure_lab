@@ -7,15 +7,16 @@ import being.Being;
 
 public class Weapon implements Usable, Exchangeable {
 
-    private String name;
     private WeaponType weaponType;
     private Material material;
     private Attack attack;
+    private String name;
 
     public Weapon(WeaponType weaponType, Material material) {
         this.weaponType = weaponType;
         this.material = material;
         this.attack = new Attack(weaponType.getMinDamage(), weaponType.getMaxDamage());
+        this.name = material.name() + " " + weaponType.name();
     }
 
     public WeaponType getWeaponType() {
@@ -24,6 +25,14 @@ public class Weapon implements Usable, Exchangeable {
 
     public Material getMaterial() {
         return material;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDamage() {
@@ -35,7 +44,7 @@ public class Weapon implements Usable, Exchangeable {
     }
 
     public int getMonetaryValue() {
-        return 0;
+        return weaponType.getMinDamage() * 4 + material.getStrength() * 5;
     }
 
 }

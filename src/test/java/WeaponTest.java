@@ -19,21 +19,36 @@ public class WeaponTest {
 //        dragon = new Dragon("Flamebreath", 100, 10, false);
     }
 
-    @Before
+    @Test
     public void hasWeaponType() {
         assertEquals(WeaponType.SWORD, weapon.getWeaponType());
     }
 
-    @Before
+    @Test
     public void hasMaterial() {
         assertEquals(Material.IRON, weapon.getMaterial());
     }
 
-    @Before
+    @Test
+    public void hasName() {
+        assertEquals("IRON SWORD", weapon.getName());
+    }
+
+    @Test
+    public void hasMonetaryValue() {
+        assertEquals(25, weapon.getMonetaryValue());
+    }
+
+    @Test
     public void canGetDamage() {
         int damageDone = weapon.getDamage();
         Boolean isInRange = damageDone >= 6 && damageDone <= 8;
         assertTrue(isInRange);
     }
 
+    @Test
+    public void canSetName() {
+        weapon.setName("SWORD OF DOOM");
+        assertEquals("SWORD OF DOOM", weapon.getName());
+    }
 }
