@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Game {
 
     private ArrayList<Room> rooms;
-    private Being player;
+    private Player player;
 
     public Game() {
         this.rooms = new ArrayList<Room>();
@@ -16,7 +16,7 @@ public class Game {
         return rooms;
     }
 
-    public Being getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
@@ -24,7 +24,7 @@ public class Game {
         this.rooms.add(room);
     }
 
-    public void addPlayer(Being player) {
+    public void addPlayer(Player player) {
         this.player = player;
     }
 }

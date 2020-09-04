@@ -12,13 +12,15 @@ public class GameTest {
 
     Game game;
     Hall hall;
-    Human player;
+    Human human;
+    Player player;
 
     @Before
     public void before() {
         game = new Game();
         hall = new Hall();
-        player = new Human("Dave", 100, Nature.GOOD);
+        human = new Human("Dave", 100, Nature.GOOD);
+        player = new Player(human);
     }
 
     @Test
