@@ -1,6 +1,7 @@
 import being.Dragon;
 import being.Human;
 import being.Nature;
+import equipment.Material;
 import equipment.Weapon;
 import equipment.WeaponType;
 import org.junit.Before;
@@ -17,7 +18,7 @@ public class HumanTest {
     @Before
     public void before() {
         human = new Human("Brian", 50, Nature.GOOD);
-        weapon = new Weapon(WeaponType.ARROW);
+        weapon = new Weapon(WeaponType.ARROW, Material.IRON);
 //        dragon = new Dragon("Flamebreath", 100, 10, false);
     }
 
