@@ -1,12 +1,12 @@
 package being;
 
-import behaviours.IMagic;
-import behaviours.IOwned;
+import behaviours.Magicable;
+import behaviours.Ownable;
 import equipment.Spell;
 
-public class Wizard extends Being implements IMagic {
+public class Wizard extends Being implements Magicable {
 
-    private IOwned ownedCreature;
+    private Ownable ownedCreature;
 
     public Wizard(String name, int healthPoints, int armourPoints, boolean friendly) {
         super(name, healthPoints, armourPoints, friendly);
@@ -18,13 +18,13 @@ public class Wizard extends Being implements IMagic {
         }
     }
 
-    public void changeOwnedCreature(IOwned creature) {
+    public void changeOwnedCreature(Ownable creature) {
         if (ownedCreature != null) { ownedCreature.setOwner(null); }
         ownedCreature = creature;
         creature.setOwner(this);
     }
 
-    public IOwned getOwnedCreature() {
+    public Ownable getOwnedCreature() {
         return ownedCreature;
     }
 }

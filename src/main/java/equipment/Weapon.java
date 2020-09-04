@@ -1,9 +1,9 @@
 package equipment;
 
-import behaviours.IApply;
+import behaviours.Useable;
 import being.Being;
 
-public class Weapon implements IApply {
+public class Weapon implements Useable {
     private WeaponType weaponType;
 
     public Weapon(WeaponType weaponType) {

@@ -2,6 +2,6 @@ package behaviours;
 
 import being.Being;
 
-public interface IApply {
+public interface Useable {
     public void applyTo(Being being);
 }

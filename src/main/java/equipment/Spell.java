@@ -1,9 +1,9 @@
 package equipment;
 
-import behaviours.IApply;
+import behaviours.Useable;
 import being.Being;
 
-public class Spell implements IApply {
+public class Spell implements Useable {
     private String name;
     private SpellType spellType;
     private int strength;

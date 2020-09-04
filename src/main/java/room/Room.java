@@ -1,21 +1,21 @@
 package room;
 
-import behaviours.IApply;
+import behaviours.Useable;
 import being.Being;
 
 import java.util.ArrayList;
 
 public class Room {
 
-    private ArrayList<IApply> contents;
+    private ArrayList<Useable> contents;
     private ArrayList<Being> inhabitants;
 
     public Room() {
-        this.contents = new ArrayList<IApply>();
+        this.contents = new ArrayList<Useable>();
         this.inhabitants = new ArrayList<Being>();
     }
 
-    public ArrayList<IApply> getContents() {
+    public ArrayList<Useable> getContents() {
         return contents;
     }
 
@@ -23,7 +23,7 @@ public class Room {
         return inhabitants;
     }
 
-    public void addContent(IApply item) {
+    public void addContent(Useable item) {
         contents.add(item);
     }
 

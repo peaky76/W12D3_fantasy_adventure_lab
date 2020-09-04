@@ -2,6 +2,6 @@ package behaviours;
 
 import being.Being;
 
-public interface IFight {
+public interface Fightable {
     public void attack(Being being);
 }

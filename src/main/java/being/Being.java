@@ -1,6 +1,6 @@
 package being;
 
-import behaviours.IApply;
+import behaviours.Useable;
 
 import java.util.ArrayList;
 
@@ -9,15 +9,15 @@ public abstract class Being {
     private int healthPoints;
     private int armourPoints;
     private boolean friendly;
-    private ArrayList<IApply> inventory;
-    private IApply equippedItem;
+    private ArrayList<Useable> inventory;
+    private Useable equippedItem;
 
     public Being(String name, int healthPoints, int armourPoints, boolean friendly) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.armourPoints = armourPoints;
         this.friendly = friendly;
-        this.inventory = new ArrayList<IApply>();
+        this.inventory = new ArrayList<Useable>();
     }
 
     public String getName() {
@@ -36,11 +36,11 @@ public abstract class Being {
         return friendly;
     }
 
-    public ArrayList<IApply> getInventory() {
+    public ArrayList<Useable> getInventory() {
         return inventory;
     }
 
-    public IApply getEquippedItem() {
+    public Useable getEquippedItem() {
         return equippedItem;
     }
 
@@ -54,18 +54,18 @@ public abstract class Being {
 
     public void healDamage(int amountOfHealing) { this.healthPoints += amountOfHealing; }
 
-    public void pickUp(IApply item) {
+    public void pickUp(Useable item) {
         inventory.add(item);
     }
 
-    public void drop(IApply item) {
+    public void drop(Useable item) {
         inventory.remove(item);
         if (equippedItem == item) {
             equippedItem = null;
         }
     }
 
-    public void equip(IApply item) {
+    public void equip(Useable item) {
         if (inventory.contains(item)) {
             equippedItem = item;
         }

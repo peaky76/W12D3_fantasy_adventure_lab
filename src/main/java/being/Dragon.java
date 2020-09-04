@@ -1,9 +1,9 @@
 package being;
 
-import behaviours.IFight;
-import behaviours.IOwned;
+import behaviours.Fightable;
+import behaviours.Ownable;
 
-public class Dragon extends Being implements IFight, IOwned {
+public class Dragon extends Being implements Fightable, Ownable {
 
     private Being owner;
 

@@ -2,7 +2,7 @@ package behaviours;
 
 import being.Being;
 
-public interface IMagic {
+public interface Magicable {
 
     public void castSpell(Being being);
 
