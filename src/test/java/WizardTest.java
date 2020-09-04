@@ -1,10 +1,3 @@
-import being.Dragon;
-import being.Wizard;
-import equipment.Spell;
-import equipment.SpellType;
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class WizardTest {

@@ -1,7 +1,6 @@
-import being.Dragon;
-import equipment.Material;
-import equipment.Weapon;
-import equipment.WeaponType;
+import item.Material;
+import item.Weapon;
+import item.WeaponType;
 import org.junit.Before;
 import org.junit.Test;
 

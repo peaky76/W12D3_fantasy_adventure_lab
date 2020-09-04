@@ -1,20 +1,9 @@
-import being.Dragon;
-import being.Wizard;
-import equipment.Item;
-import equipment.ItemType;
-import equipment.Spell;
-import equipment.SpellType;
-import org.junit.Before;
-import org.junit.Test;
-import room.Room;
-
 import static org.junit.Assert.assertEquals;
 
 public class RoomTest {
 
 //    Room room;
 //    Dragon dragon;
-//    Item treasure;
 //    Wizard wizard;
 //    Spell superSpell;
 //
@@ -22,7 +11,7 @@ public class RoomTest {
 //    public void before() {
 //        room = new Room();
 //        dragon = new Dragon("Flamebreath", 100, 10, false);
-//        treasure = new Item("Golden Amulet", ItemType.TREASURE);
+//
 //        wizard = new Wizard("Merlin", 50, 10, true);
 //        superSpell = new Spell("Exterminate", SpellType.ATTACKING, 100);
 //    }

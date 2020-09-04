@@ -1,4 +1,4 @@
-package equipment;
+package item;
 
 import action.Attack;
 import behaviours.Exchangeable;

@@ -2,7 +2,6 @@ package being;
 
 import behaviours.Magicable;
 import behaviours.Ownable;
-import equipment.Spell;
 
 public class Wizard extends Humanoid implements Magicable {
 

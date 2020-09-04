@@ -1,4 +1,4 @@
-package equipment;
+package item;
 
 public enum WeaponType {
     SWORD(5, 7),

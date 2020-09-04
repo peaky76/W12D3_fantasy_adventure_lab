@@ -1,4 +1,4 @@
-package equipment;
+package item;
 
 public enum SpellType {
     HEALING,

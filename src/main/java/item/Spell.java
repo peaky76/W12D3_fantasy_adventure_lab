@@ -1,4 +1,4 @@
-package equipment;
+package item;
 
 import behaviours.Knowable;
 import being.Being;
