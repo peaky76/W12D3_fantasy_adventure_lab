@@ -1,5 +1,6 @@
 package portal;
 
+import behaviours.Passable;
 import room.Room;
 
 public class Portal {

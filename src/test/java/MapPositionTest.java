@@ -1,3 +1,4 @@
+import com.sun.tools.javac.util.Pair;
 import map.MapPosition;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,13 +29,18 @@ public class MapPositionTest {
     }
 
     @Test
+    public void canGetMapDelta() {
+        Pair<Integer, Integer> mapDelta = a.getMapDelta(b);
+        assertEquals(-2, (int) mapDelta.fst);
+        assertEquals(2, (int) mapDelta.snd);
+    }
+
+    @Test
     public void isAdjacentToTrue() {
         assertTrue(a.isAdjacentTo(c));
     }
 
     @Test
-    public void isAdjacentToFalse() {
-        assertFalse(a.isAdjacentTo(b));
-    }
+    public void isAdjacentToFalse() { assertFalse(a.isAdjacentTo(b)); }
 
 }

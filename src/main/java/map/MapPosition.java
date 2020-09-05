@@ -1,5 +1,7 @@
 package map;
 
+import com.sun.tools.javac.util.Pair;
+
 import static java.lang.Math.abs;
 
 public class MapPosition {
@@ -32,6 +34,10 @@ public class MapPosition {
 
     public int getYDelta(MapPosition other) {
         return other.yCoord - this.yCoord;
+    }
+
+    public Pair<Integer, Integer> getMapDelta(MapPosition other) {
+        return new Pair(this.getXDelta(other), this.getYDelta(other));
     }
 
     public Boolean isAdjacentTo(MapPosition other) {
