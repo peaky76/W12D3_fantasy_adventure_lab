@@ -8,7 +8,7 @@ public class GameplayManager {
         this.playerInput = new Scanner(System.in);
     }
 
-//    public Enactable getCommand() {
+//    public Actionable getCommand() {
 //
 //        String instruction;
 //

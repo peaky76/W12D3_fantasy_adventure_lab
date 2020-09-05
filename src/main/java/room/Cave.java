@@ -27,6 +27,6 @@ public class Cave extends Room {
 
     @Override
     public String getDescription() {
-        return "You are in a cave.";
+        return "You are in a cave.\n" + super.getDescription();
     }
 }

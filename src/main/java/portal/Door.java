@@ -42,4 +42,8 @@ public class Door implements Closeable, Lockable, Passable {
 
     public void setLocked(Boolean locked) { isLocked = locked; }
 
+    public String getDescription() {
+        return "a " + material + " door";
+    }
+
 }

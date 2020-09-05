@@ -28,6 +28,6 @@ public class Hall extends Room {
 
     @Override
     public String getDescription() {
-        return "You are in a hall.";
+        return "You are in a hall.\n" + super.getDescription();
     }
 }

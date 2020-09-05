@@ -24,6 +24,6 @@ public class Forest extends Room {
 
     @Override
     public String getDescription() {
-        return "You are in a forest.";
+        return "You are in a forest.\n" + super.getDescription();
     }
 }

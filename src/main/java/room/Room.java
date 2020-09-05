@@ -57,7 +57,18 @@ public abstract class Room implements Describeable {
         return true;
     }
 
+    public String getDescription() {
+        return "There are " + getExits().size() + " exits.\n" + getDescriptionOfExits();
+    };
+
+    private String getDescriptionOfExits() {
+        String exitDescription = "";
+        for (Direction direction: exits.keySet()) {
+            exitDescription += "To the " + direction + " there is " + exits.get(direction).getDescription() + "\n";
+        }
+        return exitDescription;
+    }
+
     protected abstract Container createContainer();
-    public abstract String getDescription();
-    
+
 }

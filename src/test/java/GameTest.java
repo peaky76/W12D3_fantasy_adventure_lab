@@ -1,8 +1,13 @@
 import being.Being;
 import being.Human;
 import being.Nature;
+import item.Key;
+import item.Material;
 import org.junit.Before;
 import org.junit.Test;
+import portal.Door;
+import room.Cave;
+import room.Forest;
 import room.Hall;
 import room.Room;
 
@@ -11,16 +16,16 @@ import static org.junit.Assert.assertEquals;
 public class GameTest {
 
     Game game;
-    Hall hall;
     Human human;
     Player player;
+    Hall hall;
 
     @Before
     public void before() {
         game = new Game();
-        hall = new Hall(0,0 );
         human = new Human("Dave", 100, Nature.GOOD);
         player = new Player(human);
+        hall = new Hall(0,0);
     }
 
     @Test

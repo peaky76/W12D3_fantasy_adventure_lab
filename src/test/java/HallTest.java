@@ -18,22 +18,39 @@ import static org.junit.Assert.assertEquals;
 public class HallTest {
 
     Hall hall;
-    Cave cave;
-    Forest forest;
+
+    Forest forest1;
+    Forest forest2;
+    Forest forest3;
+
+    Key key1;
+    Key key2;
+    Key key3;
+
+    Door door1;
+    Door door2;
+    Door door3;
+
     Dragon dragon;
     Treasure treasure;
-    Key key;
-    Door door;
 
     @Before
     public void before() {
         hall = new Hall(3,4);
-        cave = new Cave(4,4);
-        forest = new Forest(2, 3);
+        forest1 = new Forest(3, 5);
+        forest2 = new Forest(4, 5);
+        forest3 = new Forest(2, 3);
+
+        key1 = new Key(Material.WOOD);
+        key2 = new Key(Material.IRON);
+        key3 = new Key(Material.STEEL);
+
+        door1 = new Door(Material.WOOD, key1, false, false);
+        door2 = new Door(Material.WOOD, key2, false, false);
+        door3 = new Door(Material.WOOD, key3, false, false);
+
         dragon = new Dragon(100);
         treasure = new Treasure(Gemstone.RUBY, Clarity.NORMAL);
-        key = new Key(Material.WOOD);
-        door = new Door(Material.WOOD, key, true, false);
     }
 
     @Test
@@ -54,13 +71,13 @@ public class HallTest {
 
     @Test
     public void canAddExit() {
-        hall.addExit(Direction.EAST, door);
+        hall.addExit(Direction.EAST, door1);
         assertEquals(1, hall.getExits().size());
     }
 
     @Test
     public void canRemoveExit() {
-        hall.addExit(Direction.EAST, door);
+        hall.addExit(Direction.EAST, door1);
         hall.removeExit(Direction.EAST);
         assertEquals(0, hall.getExits().size());
     }
@@ -79,8 +96,15 @@ public class HallTest {
 
     @Test
     public void canCreateLinkToAnotherRoom() {
-        Map.createLink(hall, cave, door);
+        Map.createLink(hall, forest1, door1);
         assertEquals(1, hall.getExits().size());
+    }
+
+    @Test
+    public void canBreakLinkToAnotherRoom() {
+        Map.createLink(hall, forest1, door1);
+        Map.breakLink(hall, forest1);
+        assertEquals(0, hall.getExits().size());
     }
 
     @Test
