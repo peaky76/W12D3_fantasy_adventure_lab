@@ -2,8 +2,11 @@ import being.Dragon;
 import item.valuable.Clarity;
 import item.valuable.Gemstone;
 import item.valuable.Treasure;
+import map.Direction;
 import org.junit.Before;
 import org.junit.Test;
+import room.Cave;
+import room.Forest;
 import room.Hall;
 
 import static org.junit.Assert.assertEquals;
@@ -11,13 +14,16 @@ import static org.junit.Assert.assertEquals;
 public class HallTest {
 
     Hall hall;
-    Hall anotherHall;
+    Cave cave;
+    Forest forest;
     Dragon dragon;
     Treasure treasure;
 
     @Before
     public void before() {
         hall = new Hall(3,4);
+        cave = new Cave(4,4);
+        forest = new Forest(2, 3);
         dragon = new Dragon(100);
         treasure = new Treasure(Gemstone.RUBY, Clarity.NORMAL);
     }
@@ -42,6 +48,12 @@ public class HallTest {
     public void canAddInhabitant() {
         hall.addInhabitant(dragon);
         assertEquals(1, hall.getInhabitants().size());
+    }
+
+    @Test
+    public void canAddExit() {
+        hall.addExit(Direction.EAST, cave);
+        assertEquals(1, hall.getExits().size());
     }
 
     @Test
