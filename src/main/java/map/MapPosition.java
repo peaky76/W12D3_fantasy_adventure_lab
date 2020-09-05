@@ -40,6 +40,10 @@ public class MapPosition {
         return new Pair(this.getXDelta(other), this.getYDelta(other));
     }
 
+    public Direction getDirectionTo(MapPosition other) {
+        return MapDelta.convertToDirection(this.getMapDelta(other));
+    }
+
     public Boolean isAdjacentTo(MapPosition other) {
         return abs(this.getXDelta(other)) <= 1 && abs(this.getYDelta(other)) <= 1;
     }

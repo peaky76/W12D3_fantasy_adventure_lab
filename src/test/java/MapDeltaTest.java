@@ -17,7 +17,7 @@ public class MapDeltaTest {
     public void before() {
         a = new MapPosition(5, 10);
         b = new MapPosition(6, 11); // Northeast of a
-        c = new MapPosition( 4, 10); // West of a
+        c = new MapPosition(4, 10); // West of a
     }
 
     @Test

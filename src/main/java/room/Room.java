@@ -1,6 +1,7 @@
 package room;
 
 import behaviours.Describeable;
+import behaviours.Passable;
 import being.Being;
 import item.storage.Container;
 import map.Direction;
@@ -11,36 +12,36 @@ import java.util.HashMap;
 
 public abstract class Room implements Describeable {
 
-    private Container container;
-    private ArrayList<Being> inhabitants;
     private MapPosition mapPosition;
-    private HashMap<Direction, Room> exits;
+    private HashMap<Direction, Passable> exits;
+    private ArrayList<Being> inhabitants;
+    private Container container;
 
     public Room(int xCoord, int yCoord) {
-        this.container = createContainer();
-        this.inhabitants = new ArrayList<Being>();
         this.mapPosition = new MapPosition(xCoord, yCoord);
-        this.exits = new HashMap<Direction, Room>();
+        this.exits = new HashMap<Direction, Passable>();
+        this.inhabitants = new ArrayList<Being>();
+        this.container = createContainer();
+    }
+
+    public MapPosition getMapPosition() { return mapPosition; }
+
+    public HashMap<Direction, Passable> getExits() { return exits; }
+
+    public ArrayList<Being> getInhabitants() {
+        return inhabitants;
     }
 
     public Container getContainer() {
         return container;
     }
 
-    public ArrayList<Being> getInhabitants() {
-        return inhabitants;
-    }
+    public void addExit(Direction direction, Passable portal) { exits.put(direction, portal); }
 
-    public MapPosition getMapPosition() { return mapPosition; }
-
-    public HashMap<Direction, Room> getExits() { return exits; }
+    public void removeExit(Direction direction) { exits.remove(direction); }
 
     public void addInhabitant(Being being) {
         inhabitants.add(being);
-    }
-
-    public void addExit(Direction direction, Room room) {
-        exits.put(direction, room);
     }
 
     public Boolean isAdjacentTo(Room otherRoom) {
