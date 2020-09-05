@@ -1,9 +1,12 @@
-package item;
+package portal;
 
 import behaviours.Closeable;
 import behaviours.Lockable;
+import behaviours.Passable;
+import item.Key;
+import item.Material;
 
-public class Door implements Closeable, Lockable {
+public class Door implements Closeable, Lockable, Passable {
 
     private Material material;
     private Key correctKey;

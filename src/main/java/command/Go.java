@@ -1,13 +1,13 @@
 package command;
 
 import behaviours.Actionable;
-import map.CompassDirection;
+import map.Direction;
 
 public class Go implements Actionable {
 
-    private CompassDirection direction;
+    private Direction direction;
 
-    public Go(CompassDirection direction) {
+    public Go(Direction direction) {
         this.direction = direction;
     }
 

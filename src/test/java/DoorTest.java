@@ -1,4 +1,4 @@
-import item.Door;
+import portal.Door;
 import item.Key;
 import item.Material;
 import org.junit.Before;
