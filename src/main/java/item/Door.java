@@ -1,16 +1,19 @@
 package item;
 
+import behaviours.Closeable;
 import behaviours.Lockable;
 
-public class Door implements Lockable {
+public class Door implements Closeable, Lockable {
 
     private Material material;
     private Key correctKey;
+    private Boolean isOpen;
     private Boolean isLocked;
 
-    public Door(Material material, Key correctKey, Boolean isLocked) {
+    public Door(Material material, Key correctKey, Boolean isOpen, Boolean isLocked) {
         this.material = material;
         this.correctKey = correctKey;
+        this.isOpen = isOpen;
         this.isLocked = isLocked;
     }
 
@@ -22,10 +25,18 @@ public class Door implements Lockable {
         return correctKey;
     }
 
-    public Boolean getLockedStatus() {
+    public Boolean getOpen() {
+        return isOpen;
+    }
+
+    public void setOpen(Boolean open) {
+        isOpen = open;
+    }
+
+    public Boolean getLocked() {
         return isLocked;
     }
 
-    public void setLockedStatus(Boolean locked) { isLocked = locked; }
+    public void setLocked(Boolean locked) { isLocked = locked; }
 
 }

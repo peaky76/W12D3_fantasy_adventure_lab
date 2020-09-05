@@ -1,6 +1,6 @@
 package behaviours;
 
-public interface Exchangeable extends Possessable {
+public interface Tradeable {
 
     int getMonetaryValue();
 

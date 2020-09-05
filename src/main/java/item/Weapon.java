@@ -1,12 +1,12 @@
 package item;
 
 import action.Attack;
-import behaviours.Exchangeable;
+import behaviours.Tradeable;
 import behaviours.Possessable;
 import behaviours.Victimable;
 import being.Being;
 
-public class Weapon implements Possessable, Victimable {
+public class Weapon implements Tradeable, Possessable, Victimable {
 
     private WeaponType weaponType;
     private Material material;

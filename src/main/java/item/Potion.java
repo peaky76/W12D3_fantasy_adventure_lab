@@ -1,11 +1,11 @@
 package item;
 
 import behaviours.Consumable;
-import behaviours.Exchangeable;
+import behaviours.Tradeable;
 import behaviours.Possessable;
 import being.Being;
 
-public class Potion implements Consumable, Exchangeable {
+public class Potion implements Consumable, Tradeable, Possessable {
 
     private String name;
     private Effect effect;

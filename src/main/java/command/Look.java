@@ -1,18 +1,19 @@
 package command;
 
 import behaviours.Actionable;
-import room.Room;
+import behaviours.Describeable;
+
 
 public class Look implements Actionable {
 
-    private Room room;
+    private Describeable object;
 
-    public Look(Room room) {
-        this.room = room;
+    public Look(Describeable object) {
+        this.object = object;
     }
 
     public void enact() {
-        System.out.println(this.room.getDescription());
+        System.out.println(this.object.getDescription());
     }
 
 }
