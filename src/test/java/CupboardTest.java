@@ -21,7 +21,7 @@ public class CupboardTest {
         wrongKey = new Key(Material.IRON);
         cupboard = new Cupboard();
         cupboard.setCorrectKey(correctKey);
-        cupboard.setLockedStatus(true);
+        cupboard.setLocked(true);
         weapon = new Weapon(WeaponType.SWORD, Material.STEEL);
     }
 
@@ -38,13 +38,13 @@ public class CupboardTest {
     @Test
     public void canUnlockWithCorrectKey() {
         cupboard.unlockWith(correctKey);
-        assertEquals(false, cupboard.getLockedStatus());
+        assertEquals(false, cupboard.getLocked());
     }
 
     @Test
     public void cannotUnlockWithWrongKey() {
         cupboard.unlockWith(wrongKey);
-        assertEquals(true, cupboard.getLockedStatus());
+        assertEquals(true, cupboard.getLocked());
     }
 
     @Test

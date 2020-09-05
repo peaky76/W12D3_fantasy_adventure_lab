@@ -7,7 +7,8 @@ import static helper.Helper.getRandomIntInRange;
 
 public class Forest extends Room {
 
-    public Forest() {
+    public Forest(int xCoord, int yCoord) {
+        super(xCoord, yCoord);
     }
 
     @Override

@@ -7,7 +7,8 @@ import static helper.Helper.getRandomIntInRange;
 
 public class Hall extends Room {
 
-    public Hall() {
+    public Hall(int xCoord, int yCoord) {
+        super(xCoord, yCoord);
     }
 
     @Override

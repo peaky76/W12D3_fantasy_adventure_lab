@@ -1,6 +1,7 @@
 package command;
 
 import behaviours.Actionable;
+import behaviours.Closeable;
 
 public class Open implements Actionable {
 

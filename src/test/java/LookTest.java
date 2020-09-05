@@ -12,7 +12,7 @@ public class LookTest {
 
     @Before
     public void before() {
-        hall = new Hall();
+        hall = new Hall(0,0);
         command = new Look(hall);
     }
 

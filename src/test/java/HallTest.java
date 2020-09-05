@@ -16,9 +16,15 @@ public class HallTest {
 
     @Before
     public void before() {
-        hall = new Hall();
+        hall = new Hall(3,4);
         dragon = new Dragon(100);
         treasure = new Treasure(Gemstone.RUBY, Clarity.NORMAL);
+    }
+
+    @Test
+    public void hasMapPosition() {
+        assertEquals(3, hall.getMapPosition().getxCoord());
+        assertEquals(4, hall.getMapPosition().getyCoord());
     }
 
     @Test

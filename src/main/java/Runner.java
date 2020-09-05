@@ -11,7 +11,7 @@ public class Runner {
 
         Human character = new Human("Dave", 100, Nature.GOOD);
         Player player = new Player(character);
-        Hall room1 = new Hall();
+        Hall room1 = new Hall(0,0);
 
         game.addPlayer(player);
         game.addRoom(room1);

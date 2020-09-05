@@ -22,7 +22,7 @@ public class ChestTest {
         wrongKey = new Key(Material.IRON);
         chest = new Chest(Material.WOOD);
         chest.setCorrectKey(correctKey);
-        chest.setLockedStatus(true);
+        chest.setLocked(true);
         weapon = new Weapon(WeaponType.ARROW, Material.IRON);
         treasure = new Treasure(Gemstone.RUBY, Clarity.FLAWLESS);
     }
@@ -45,13 +45,13 @@ public class ChestTest {
     @Test
     public void canUnlockWithCorrectKey() {
         chest.unlockWith(correctKey);
-        assertEquals(false, chest.getLockedStatus());
+        assertEquals(false, chest.getLocked());
     }
 
     @Test
     public void cannotUnlockWithWrongKey() {
         chest.unlockWith(wrongKey);
-        assertEquals(true, chest.getLockedStatus());
+        assertEquals(true, chest.getLocked());
     }
 
     @Test

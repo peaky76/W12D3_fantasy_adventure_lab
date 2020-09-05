@@ -17,7 +17,7 @@ public class PlayerTest {
     public void before() {
         elf = new Elf("Brian", 50, Nature.GOOD);
         player = new Player(elf);
-        cave = new Cave();
+        cave = new Cave(0,0);
     }
 
     @Test

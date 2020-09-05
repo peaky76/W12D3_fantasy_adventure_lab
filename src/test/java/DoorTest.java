@@ -16,7 +16,7 @@ public class DoorTest {
     public void before() {
         correctKey = new Key(Material.WOOD);
         wrongKey = new Key(Material.IRON);
-        door = new Door(Material.WOOD, correctKey, true);
+        door = new Door(Material.WOOD, correctKey, false, true);
     }
 
     @Test
@@ -32,13 +32,13 @@ public class DoorTest {
     @Test
     public void canUnlockWithCorrectKey() {
         door.unlockWith(correctKey);
-        assertEquals(false, door.getLockedStatus());
+        assertEquals(false, door.getLocked());
     }
 
     @Test
     public void cannotUnlockWithWrongKey() {
         door.unlockWith(wrongKey);
-        assertEquals(true, door.getLockedStatus());
+        assertEquals(true, door.getLocked());
     }
 
 }

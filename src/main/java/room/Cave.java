@@ -10,7 +10,8 @@ import static helper.Helper.getRandomIntInRange;
 
 public class Cave extends Room {
 
-    public Cave() {
+    public Cave(int xCoord, int yCoord) {
+        super(xCoord, yCoord);
     }
 
     @Override

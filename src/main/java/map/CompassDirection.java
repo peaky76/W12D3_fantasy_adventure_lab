@@ -1,4 +1,4 @@
-package command;
+package map;
 
 public class CompassDirection {
 }

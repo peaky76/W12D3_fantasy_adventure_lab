@@ -18,7 +18,7 @@ public class GameTest {
     @Before
     public void before() {
         game = new Game();
-        hall = new Hall();
+        hall = new Hall(0,0 );
         human = new Human("Dave", 100, Nature.GOOD);
         player = new Player(human);
     }
