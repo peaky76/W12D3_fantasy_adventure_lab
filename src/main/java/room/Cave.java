@@ -23,4 +23,9 @@ public class Cave extends Room {
                 return new Barrel();
         }
     }
+
+    @Override
+    public String getDescription() {
+        return "You are in a cave.";
+    }
 }

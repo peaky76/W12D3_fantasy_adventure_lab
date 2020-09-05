@@ -1,6 +1,7 @@
 package behaviours;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public interface Fillable {
 
@@ -15,8 +16,8 @@ public interface Fillable {
 
     default String listContents(){
         String contentsList = "";
-        for (Possessable item: getContents()) {
-            contentsList.concat(item.toString() + "\n");
+        for (Possessable item: this.getContents()) {
+            contentsList += item.getName() + "\n";
         }
         return contentsList;
     }

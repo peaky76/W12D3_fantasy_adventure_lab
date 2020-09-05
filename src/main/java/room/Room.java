@@ -1,11 +1,12 @@
 package room;
 
+import behaviours.Describeable;
 import being.Being;
 import item.storage.Container;
 
 import java.util.ArrayList;
 
-public abstract class Room {
+public abstract class Room implements Describeable {
 
     private Container container;
     private ArrayList<Being> inhabitants;
@@ -37,5 +38,6 @@ public abstract class Room {
     }
 
     protected abstract Container createContainer();
+    public abstract String getDescription();
     
 }

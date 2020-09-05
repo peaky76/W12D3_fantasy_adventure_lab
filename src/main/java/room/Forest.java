@@ -20,4 +20,9 @@ public class Forest extends Room {
                 return new Sack();
         }
     }
+
+    @Override
+    public String getDescription() {
+        return "You are in a forest.";
+    }
 }

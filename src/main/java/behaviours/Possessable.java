@@ -1,4 +1,7 @@
 package behaviours;
 
-public interface Possessable {
+public interface Possessable extends Interactable {
+
+    String getName();
+
 }

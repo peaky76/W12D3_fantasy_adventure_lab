@@ -1,11 +1,12 @@
 package item.storage;
 
+import behaviours.Describeable;
 import behaviours.Fillable;
 import behaviours.Possessable;
 
 import java.util.ArrayList;
 
-public abstract class Container implements Fillable {
+public abstract class Container implements Fillable, Describeable {
 
     private ArrayList<Possessable> contents;
 
@@ -25,5 +26,9 @@ public abstract class Container implements Fillable {
         if (this.contents.contains(item)) {
             this.contents.remove(item);
         }
+    }
+
+    public String getDescription() {
+        return this.listContents();
     }
 }

@@ -1,6 +1,8 @@
 package being;
 
-public abstract class Being {
+import behaviours.Interactable;
+
+public abstract class Being implements Interactable {
     private String name;
     private int healthPoints;
     private Nature nature;

@@ -1,5 +1,8 @@
 import item.*;
 import item.storage.Chest;
+import item.valuable.Clarity;
+import item.valuable.Gemstone;
+import item.valuable.Treasure;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +14,7 @@ public class ChestTest {
     Key correctKey;
     Key wrongKey;
     Weapon weapon;
+    Treasure treasure;
 
     @Before
     public void before() {
@@ -20,6 +24,7 @@ public class ChestTest {
         chest.setCorrectKey(correctKey);
         chest.setLockedStatus(true);
         weapon = new Weapon(WeaponType.ARROW, Material.IRON);
+        treasure = new Treasure(Gemstone.RUBY, Clarity.FLAWLESS);
     }
 
     @Test
@@ -60,6 +65,13 @@ public class ChestTest {
         chest.addItem(weapon);
         chest.removeItem(weapon);
         assertEquals(0, chest.contentsCount());
+    }
+
+    @Test
+    public void canListContents() {
+        chest.addItem(weapon);
+        chest.addItem(treasure);
+        assertEquals("IRON ARROW\nFLAWLESS RUBY\n", chest.listContents());
     }
 
 }

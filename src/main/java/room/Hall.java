@@ -24,4 +24,9 @@ public class Hall extends Room {
                 return new Cupboard();
         }
     }
+
+    @Override
+    public String getDescription() {
+        return "You are in a hall.";
+    }
 }
