@@ -23,8 +23,8 @@ public class HallTest {
 
     @Test
     public void hasMapPosition() {
-        assertEquals(3, hall.getMapPosition().getxCoord());
-        assertEquals(4, hall.getMapPosition().getyCoord());
+        assertEquals(3, hall.getMapPosition().getXCoord());
+        assertEquals(4, hall.getMapPosition().getYCoord());
     }
 
     @Test

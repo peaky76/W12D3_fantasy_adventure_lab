@@ -10,19 +10,28 @@ public class MapPosition {
         this.yCoord = yCoord;
     }
 
-    public int getxCoord() {
+    public int getXCoord() {
         return xCoord;
     }
 
-    public void setxCoord(int xCoord) {
+    public void setXCoord(int xCoord) {
         this.xCoord = xCoord;
     }
 
-    public int getyCoord() {
+    public int getYCoord() {
         return yCoord;
     }
 
-    public void setyCoord(int yCoord) {
+    public void setYCoord(int yCoord) {
         this.yCoord = yCoord;
     }
+
+    public int getXDelta(MapPosition other) {
+        return other.xCoord - this.xCoord;
+    }
+
+    public int getYDelta(MapPosition other) {
+        return other.yCoord - this.yCoord;
+    }
+
 }
