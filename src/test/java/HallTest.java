@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class HallTest {
 
     Hall hall;
+    Hall anotherHall;
     Dragon dragon;
     Treasure treasure;
 

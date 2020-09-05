@@ -33,6 +33,10 @@ public abstract class Room implements Describeable {
         inhabitants.add(being);
     }
 
+    public Boolean isAdjacentTo(Room otherRoom) {
+        return this.mapPosition.isAdjacentTo(otherRoom.mapPosition);
+    }
+
     public Boolean isCleared() {
         for (Being enemy: inhabitants) {
             if (!enemy.isDead()) {
