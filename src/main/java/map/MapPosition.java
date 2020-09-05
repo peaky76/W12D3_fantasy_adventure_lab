@@ -1,5 +1,7 @@
 package map;
 
+import static java.lang.Math.abs;
+
 public class MapPosition {
 
     private int xCoord;
@@ -10,9 +12,7 @@ public class MapPosition {
         this.yCoord = yCoord;
     }
 
-    public int getXCoord() {
-        return xCoord;
-    }
+    public int getXCoord() { return xCoord; }
 
     public void setXCoord(int xCoord) {
         this.xCoord = xCoord;
@@ -32,6 +32,10 @@ public class MapPosition {
 
     public int getYDelta(MapPosition other) {
         return other.yCoord - this.yCoord;
+    }
+
+    public Boolean isAdjacentTo(MapPosition other) {
+        return abs(this.getXDelta(other)) <= 1 && abs(this.getYDelta(other)) <= 1;
     }
 
 }
