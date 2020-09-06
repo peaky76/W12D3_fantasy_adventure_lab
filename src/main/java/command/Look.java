@@ -1,10 +1,9 @@
 package command;
 
-import behaviours.Actionable;
 import behaviours.Describeable;
 
 
-public class Look implements Actionable {
+public class Look extends Command {
 
     private Describeable object;
 

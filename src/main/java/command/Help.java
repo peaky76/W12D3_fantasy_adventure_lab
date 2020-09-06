@@ -1,8 +1,6 @@
 package command;
 
-import behaviours.Actionable;
-
-public class Help implements Actionable {
+public class Help extends Command {
 
     public Help(){}
 

@@ -1,11 +1,10 @@
 package command;
 
-import behaviours.Actionable;
 import behaviours.Possessable;
 
 import java.util.ArrayList;
 
-public class PickUp implements Actionable {
+public class PickUp extends Command {
 
     private ArrayList<Possessable> objects;
 

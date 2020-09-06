@@ -1,9 +1,8 @@
 package command;
 
-import behaviours.Actionable;
 import map.Direction;
 
-public class Go implements Actionable {
+public class Go extends Command {
 
     private Direction direction;
 

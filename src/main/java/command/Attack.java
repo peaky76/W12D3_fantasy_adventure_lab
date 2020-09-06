@@ -1,9 +1,8 @@
 package command;
 
-import behaviours.Actionable;
 import being.Being;
 
-public class Attack implements Actionable {
+public class Attack extends Command {
 
     private Being target;
 

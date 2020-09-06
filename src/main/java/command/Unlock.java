@@ -1,9 +1,8 @@
 package command;
 
-import behaviours.Actionable;
 import behaviours.Lockable;
 
-public class Unlock implements Actionable {
+public class Unlock extends Command {
 
     private Lockable lockable;
 

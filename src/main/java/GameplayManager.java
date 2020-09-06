@@ -1,5 +1,3 @@
-import behaviours.Actionable;
-
 import java.util.Scanner;
 
 public class GameplayManager {
