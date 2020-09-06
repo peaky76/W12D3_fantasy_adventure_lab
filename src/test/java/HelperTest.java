@@ -27,7 +27,7 @@ public class HelperTest {
 
         // Arrange
         Key key = new Key(Material.STEEL);
-        Door door = new Door(Material.WOOD, key, false, false);
+        Door door = new Door(Material.WOOD);
         ArrayList<Describeable> describeables = new ArrayList<Describeable>();
         describeables.add(key);
         describeables.add(door);

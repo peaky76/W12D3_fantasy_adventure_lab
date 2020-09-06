@@ -4,19 +4,15 @@ import item.Material;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class DoorTest {
 
     Door door;
-    Key correctKey;
-    Key wrongKey;
 
     @Before
     public void before() {
-        correctKey = new Key(Material.WOOD);
-        wrongKey = new Key(Material.IRON);
-        door = new Door(Material.WOOD, correctKey, false, true);
+        door = new Door(Material.WOOD);
     }
 
     @Test
@@ -25,20 +21,23 @@ public class DoorTest {
     }
 
     @Test
-    public void hasCorrectKey() {
-        assertEquals(correctKey, door.getCorrectKey());
+    public void startsClosed() { assertFalse(door.getOpen()); }
+
+    @Test
+    public void canOpen() {
+        door.open();
+        assertTrue(door.getOpen());
     }
 
     @Test
-    public void canUnlockWithCorrectKey() {
-        door.unlockWith(correctKey);
-        assertEquals(false, door.getLocked());
+    public void canClose() {
+        door.open();
+        door.close();
+        assertFalse(door.getOpen());
     }
 
     @Test
-    public void cannotUnlockWithWrongKey() {
-        door.unlockWith(wrongKey);
-        assertEquals(true, door.getLocked());
+    public void canGetDescription() {
+        assertEquals("a WOOD DOOR", door.getDescription());
     }
-
 }

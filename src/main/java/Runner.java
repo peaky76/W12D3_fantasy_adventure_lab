@@ -25,8 +25,8 @@ public class Runner {
         Key key1 = new Key(Material.IRON);
         Key key2 = new Key(Material.IRON);
 
-        Door door1 = new Door(Material.WOOD, key1, false, false);
-        Door door2 = new Door(Material.WOOD, key2, false, false);
+        Door door1 = new Door(Material.WOOD);
+        Door door2 = new Door(Material.WOOD);
 
         Room[] rooms = {room1, forest1, forest2};
 

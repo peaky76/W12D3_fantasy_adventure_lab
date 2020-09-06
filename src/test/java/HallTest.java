@@ -41,13 +41,9 @@ public class HallTest {
         forest2 = new Forest(4, 5);
         forest3 = new Forest(2, 3);
 
-        key1 = new Key(Material.WOOD);
-        key2 = new Key(Material.IRON);
-        key3 = new Key(Material.STEEL);
-
-        door1 = new Door(Material.WOOD, key1, false, false);
-        door2 = new Door(Material.WOOD, key2, false, false);
-        door3 = new Door(Material.WOOD, key3, false, false);
+        door1 = new Door(Material.WOOD);
+        door2 = new Door(Material.WOOD);
+        door3 = new Door(Material.WOOD);
 
         dragon = new Dragon(100);
         treasure = new Treasure(Gemstone.RUBY, Clarity.NORMAL);
