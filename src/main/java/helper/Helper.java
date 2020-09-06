@@ -27,10 +27,10 @@ public class Helper {
         return false;
     }
 
-    public static String stringifyArrayList(ArrayList<Describeable> arrayList) {
+    public static String stringifyArrayList(ArrayList arrayList) {
         String stringifiedList = "";
-        for (Describeable item: arrayList) {
-            stringifiedList += item.getDescription() + "\n";
+        for (Object item: arrayList) {
+            stringifiedList += item.toString() + "\n";
         }
         return stringifiedList;
     }

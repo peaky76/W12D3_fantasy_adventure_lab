@@ -1,3 +1,8 @@
+import command.Command;
+import command.Help;
+import command.Look;
+
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class GameplayManager {
@@ -6,6 +11,16 @@ public class GameplayManager {
 
     public GameplayManager() {
         this.playerInput = new Scanner(System.in);
+    }
+
+    public Command getCommand() throws IllegalAccessException, InstantiationException {
+
+
+
+        Command rtn;
+        rtn = Help.class.newInstance();
+
+        return rtn;
     }
 
 //    public Actionable getCommand() {

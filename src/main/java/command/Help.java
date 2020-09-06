@@ -4,5 +4,7 @@ public class Help extends Command {
 
     public Help(){}
 
-    public void enact() {}
+    public void enact() {
+        System.out.println(CommandDictionary.getInstance().getCommands());
+    }
 }

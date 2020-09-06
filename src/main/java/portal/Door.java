@@ -34,4 +34,6 @@ public class Door implements Closeable, Passable {
         return indefiniteArticle(material.name()) + " " + material.name() + " DOOR";
     }
 
+    @Override
+    public String toString() { return getDescription(); }
 }

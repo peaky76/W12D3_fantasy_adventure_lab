@@ -36,4 +36,7 @@ public class Key implements Possessable {
         return indefiniteArticle(name) + " " + name;
     }
 
+    @Override
+    public String toString() { return getDescription(); }
+
 }

@@ -40,4 +40,7 @@ public abstract class Being implements Interactable {
         return name;
     }
 
+    @Override
+    public String toString() { return getDescription(); }
+
 }
