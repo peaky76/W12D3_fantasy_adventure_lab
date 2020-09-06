@@ -1,4 +1,4 @@
 package behaviours;
 
-public interface Interactable {
+public interface Interactable extends Describeable {
 }

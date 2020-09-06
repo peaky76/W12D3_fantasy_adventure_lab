@@ -1,4 +1,4 @@
 package behaviours;
 
-public interface Passable extends Describeable {
+public interface Passable extends Interactable {
 }

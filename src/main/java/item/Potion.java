@@ -63,4 +63,6 @@ public class Potion implements Consumable, Tradeable, Possessable {
         return power + " " + type;
     }
 
+    public String getDescription() { return name; }
+
 }

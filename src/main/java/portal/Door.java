@@ -6,6 +6,8 @@ import behaviours.Passable;
 import item.Key;
 import item.Material;
 
+import static helper.Helper.indefiniteArticle;
+
 public class Door implements Closeable, Lockable, Passable {
 
     private Material material;
@@ -43,7 +45,7 @@ public class Door implements Closeable, Lockable, Passable {
     public void setLocked(Boolean locked) { isLocked = locked; }
 
     public String getDescription() {
-        return "a " + material + " door";
+        return indefiniteArticle(material.name()) + " " + material.name() + " DOOR";
     }
 
 }

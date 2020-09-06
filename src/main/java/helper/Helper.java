@@ -1,5 +1,10 @@
 package helper;
 
+import behaviours.Describeable;
+import behaviours.Possessable;
+
+import java.util.ArrayList;
+
 public class Helper {
 
     public static int getRandomIntInRange(int min, int max) {
@@ -22,7 +27,11 @@ public class Helper {
         return false;
     }
 
-    public static String snakeCase(String string) {
-        return string.replace(" ","_");
+    public static String stringifyArrayList(ArrayList<Describeable> arrayList) {
+        String stringifiedList = "";
+        for (Describeable item: arrayList) {
+            stringifiedList += item.getDescription() + "\n";
+        }
+        return stringifiedList;
     }
 }

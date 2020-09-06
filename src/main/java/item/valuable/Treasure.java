@@ -32,4 +32,8 @@ public class Treasure implements Possessable, Tradeable {
         return (int) (gemstone.getValue() * clarity.getModifier());
     }
 
+    public String getDescription() {
+        return name;
+    }
+
 }

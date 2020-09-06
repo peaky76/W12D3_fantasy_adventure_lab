@@ -36,4 +36,8 @@ public abstract class Being implements Interactable {
         return healthPoints <= 0;
     }
 
+    public String getDescription() {
+        return name;
+    }
+
 }

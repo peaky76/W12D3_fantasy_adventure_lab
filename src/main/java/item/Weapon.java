@@ -48,4 +48,6 @@ public class Weapon implements Tradeable, Possessable, Victimable {
         return weaponType.getMinDamage() * 4 + material.getStrength() * 5;
     }
 
+    public String getDescription() { return name; }
+
 }
